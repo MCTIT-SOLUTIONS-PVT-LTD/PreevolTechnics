@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Preevol Technics", "Preevol Technics.vbproj", "{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Preevol ERP 0723", "Preevol ERP\Preevol ERP.vdproj", "{50718C9D-0CCB-4F80-8987-963B5455FCD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		CD_ROM|x86 = CD_ROM|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		DVD-5|Any CPU = DVD-5|Any CPU
+		DVD-5|x86 = DVD-5|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		SingleImage|Any CPU = SingleImage|Any CPU
+		SingleImage|x86 = SingleImage|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.CD_ROM|x86.ActiveCfg = Release|x86
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.CD_ROM|x86.Build.0 = Release|x86
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.Debug|x86.ActiveCfg = Debug|x86
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.Debug|x86.Build.0 = Debug|x86
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.DVD-5|x86.ActiveCfg = Debug|x86
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.DVD-5|x86.Build.0 = Debug|x86
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.Release|x86.ActiveCfg = Release|x86
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.Release|x86.Build.0 = Release|x86
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.SingleImage|x86.ActiveCfg = Release|x86
+		{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}.SingleImage|x86.Build.0 = Release|x86
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.CD_ROM|Any CPU.ActiveCfg = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.CD_ROM|Any CPU.Build.0 = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.CD_ROM|x86.ActiveCfg = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.CD_ROM|x86.Build.0 = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.Debug|Any CPU.ActiveCfg = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.Debug|Any CPU.Build.0 = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.Debug|x86.ActiveCfg = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.Debug|x86.Build.0 = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.DVD-5|Any CPU.ActiveCfg = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.DVD-5|Any CPU.Build.0 = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.DVD-5|x86.ActiveCfg = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.DVD-5|x86.Build.0 = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.Release|Any CPU.ActiveCfg = Release
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.Release|Any CPU.Build.0 = Release
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.Release|x86.ActiveCfg = Release
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.Release|x86.Build.0 = Release
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.SingleImage|Any CPU.ActiveCfg = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.SingleImage|Any CPU.Build.0 = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.SingleImage|x86.ActiveCfg = Debug
+		{50718C9D-0CCB-4F80-8987-963B5455FCD7}.SingleImage|x86.Build.0 = Debug
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B4F78D9-BF49-42B1-B506-07EC5A13CC45}
+	EndGlobalSection
+EndGlobal
