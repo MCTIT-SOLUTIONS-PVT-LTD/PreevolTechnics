@@ -1,0 +1,1860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Nuke.Common.7.0.2\build\Nuke.Common.props" Condition="Exists('packages\Nuke.Common.7.0.2\build\Nuke.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C2FED78-12DB-4BCA-B16C-5296A2BDCE98}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PreevolTechnics</RootNamespace>
+    <AssemblyName>PreevolTechnics</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PreevolTechnics.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v23.2" />
+    <Reference Include="DevExpress.Charts.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v23.2" />
+    <Reference Include="DevExpress.Data.v23.2" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2" />
+    <Reference Include="DevExpress.Utils.v23.2" />
+    <Reference Include="DevExpress.Sparkline.v23.2.Core" />
+    <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.UI, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.Wizard, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v23.2" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2.Extensions, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpellChecker.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EASendMail, Version=7.9.1.3, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
+      <HintPath>packages\EASendMail.7.9.1.3\lib\net45\EASendMail.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Schema, Version=3.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.Schema.3.0.14\lib\net45\Newtonsoft.Json.Schema.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DS_Invoice.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Invoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_Invoice.vb">
+      <DependentUpon>DS_Invoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_ProformaInvoice.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ProformaInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_ProformaServiceInvoice.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ProformaServiceInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_ProformaServiceInvoice.vb">
+      <DependentUpon>DS_ProformaServiceInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_PurchaseOrder.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PurchaseOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_Quotation.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Quotation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_Quotation.vb">
+      <DependentUpon>DS_Quotation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_ServiceInvoice.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ServiceInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_ServiceInvoice.vb">
+      <DependentUpon>DS_ServiceInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DS_WorkOrder.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_WorkOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_ProformaInvoiceNew.designer.vb">
+      <DependentUpon>Frm_ProformaInvoiceNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_ProformaInvoiceNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Invoice.designer.vb">
+      <DependentUpon>Frm_Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\AuthClass1.vb" />
+    <Compile Include="Module\EInvoiceJsonModule.vb" />
+    <Compile Include="Forms\FrmOpenStock.designer.vb">
+      <DependentUpon>FrmOpenStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmOpenStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Message.designer.vb">
+      <DependentUpon>Frm_Message.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Message.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddPlungerDia.designer.vb">
+      <DependentUpon>Frm_AddPlungerDia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddPlungerDia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddModel.designer.vb">
+      <DependentUpon>Frm_AddModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddModel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddFinancialYear.designer.vb">
+      <DependentUpon>Frm_AddFinancialYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddFinancialYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddPOProduct.designer.vb">
+      <DependentUpon>Frm_AddPOProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddPOProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddVendor.designer.vb">
+      <DependentUpon>Frm_AddVendor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddVendor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddSubCategory.designer.vb">
+      <DependentUpon>Frm_AddSubCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddSubCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddCategory.designer.vb">
+      <DependentUpon>Frm_AddCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddProduct.designer.vb">
+      <DependentUpon>Frm_AddProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddParty.designer.vb">
+      <DependentUpon>Frm_AddParty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddParty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Dashboard.designer.vb">
+      <DependentUpon>Frm_Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_AddGoods.designer.vb">
+      <DependentUpon>Frm_AddGoods.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_AddGoods.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_PlungerDia.designer.vb">
+      <DependentUpon>Frm_PlungerDia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_PlungerDia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Model.designer.vb">
+      <DependentUpon>Frm_Model.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Model.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Goods.designer.vb">
+      <DependentUpon>Frm_Goods.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Goods.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_InventoryManagement.designer.vb">
+      <DependentUpon>Frm_InventoryManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_InventoryManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_StockReport.designer.vb">
+      <DependentUpon>Frm_StockReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_StockReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectInventoryType.designer.vb">
+      <DependentUpon>Frm_SelectInventoryType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectInventoryType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Type.designer.vb">
+      <DependentUpon>Frm_Type.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Type.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Quotation.designer.vb">
+      <DependentUpon>Frm_Quotation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Quotation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_NewFirstCompany.designer.vb">
+      <DependentUpon>Frm_NewFirstCompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_NewFirstCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectBankForQuotation.designer.vb">
+      <DependentUpon>Frm_SelectBankForQuotation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectBankForQuotation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectQuotationType.designer.vb">
+      <DependentUpon>Frm_SelectQuotationType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectQuotationType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_ServiceReportNew.designer.vb">
+      <DependentUpon>Frm_ServiceReportNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_ServiceReportNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SalesReport.designer.vb">
+      <DependentUpon>Frm_SalesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SalesReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_POProduct.designer.vb">
+      <DependentUpon>Frm_POProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_POProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_ProformaServiceInvoice.designer.vb">
+      <DependentUpon>Frm_ProformaServiceInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_ProformaServiceInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectBankForProforma.designer.vb">
+      <DependentUpon>Frm_SelectBankForProforma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectBankForProforma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectInvoiceTypeForReport.designer.vb">
+      <DependentUpon>Frm_SelectInvoiceTypeForReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectInvoiceTypeForReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectProformaInvoiceType.designer.vb">
+      <DependentUpon>Frm_SelectProformaInvoiceType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectProformaInvoiceType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectWOType.designer.vb">
+      <DependentUpon>Frm_SelectWOType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectWOType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_WorkOrder.designer.vb">
+      <DependentUpon>Frm_WorkOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_WorkOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_PurchaseOrder.designer.vb">
+      <DependentUpon>Frm_PurchaseOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_PurchaseOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectPOType.designer.vb">
+      <DependentUpon>Frm_SelectPOType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectPOType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Vendor.designer.vb">
+      <DependentUpon>Frm_Vendor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Vendor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_ProformaInvoice.designer.vb">
+      <DependentUpon>Frm_ProformaInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_ProformaInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Party.designer.vb">
+      <DependentUpon>Frm_Party.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Party.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectCompany.designer.vb">
+      <DependentUpon>Frm_SelectCompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Connection.Designer.vb">
+      <DependentUpon>Frm_Connection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Connection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Company.designer.vb">
+      <DependentUpon>Frm_Company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Company.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Category.designer.vb">
+      <DependentUpon>Frm_Category.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Category.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Bank.designer.vb">
+      <DependentUpon>Frm_Bank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Bank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Product.designer.vb">
+      <DependentUpon>Frm_Product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Product.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectBank.designer.vb">
+      <DependentUpon>Frm_SelectBank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectBank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectInvoiceType.designer.vb">
+      <DependentUpon>Frm_SelectInvoiceType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SelectInvoiceType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_ServiceInvoice.designer.vb">
+      <DependentUpon>Frm_ServiceInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_ServiceInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Test.designer.vb">
+      <DependentUpon>Frm_Test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_SubCategory.designer.vb">
+      <DependentUpon>Frm_SubCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_SubCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Login.designer.vb">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_User.designer.vb">
+      <DependentUpon>Frm_User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_User.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmWaiting.designer.vb">
+      <DependentUpon>FrmWaiting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmWaiting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmOpen.designer.vb">
+      <DependentUpon>FrmOpen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmOpen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_StartUp.Designer.vb">
+      <DependentUpon>Frm_StartUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_StartUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RibbonForm1.Designer.vb">
+      <DependentUpon>Frm_Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\DateFormat_Module.vb" />
+    <Compile Include="Module\EstablishConnection.vb" />
+    <Compile Include="Module\GridColumn_Format.vb" />
+    <Compile Include="Module\GridLookUp_Module.vb" />
+    <Compile Include="Module\InitCombo_Module.vb" />
+    <Compile Include="Module\InWord_Module.vb" />
+    <Compile Include="Module\IRNClass1.vb" />
+    <Compile Include="Module\NumberFormat.vb" />
+    <Compile Include="Module\Others.vb" />
+    <Compile Include="Module\Program.vb" />
+    <Compile Include="Module\Settings.UserOverride.vb" />
+    <Compile Include="Module\ShowReport_Module.vb" />
+    <Compile Include="Module\Waiting_Module.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Reports\XR_ExportSalesIGSTWithoutDis.designer.vb">
+      <DependentUpon>XR_ExportSalesIGSTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ExportSalesIGSTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ExportServiceIGSTWithoutDis.designer.vb">
+      <DependentUpon>XR_ExportServiceIGSTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ExportServiceIGSTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_InvoiceIGSTWithoutDis.designer.vb">
+      <DependentUpon>XR_InvoiceIGSTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_InvoiceIGSTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_InvoiceWithoutDis.designer.vb">
+      <DependentUpon>XR_InvoiceWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_InvoiceWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaExportSalesWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaExportSalesWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaExportSalesWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaExportSales .designer.vb">
+      <DependentUpon>XR_ProformaExportSales .vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaExportSales .vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaExportServiceWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaExportServiceWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaExportServiceWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaExportService.designer.vb">
+      <DependentUpon>XR_ProformaExportService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaExportService.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaInvoiceIGSTWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaInvoiceIGSTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaInvoiceIGSTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaInvoiceWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaInvoiceWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaInvoiceWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaServiceInvoiceIGSTWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaServiceInvoiceIGSTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaServiceInvoiceIGSTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaServiceInvoiceWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaServiceInvoiceWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaServiceInvoiceWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZSalesWithLUTWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaSEZSalesWithLUTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZSalesWithLUTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZSalesWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaSEZSalesWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZSalesWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZServiceWithLUTWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaSEZServiceWithLUTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZServiceWithLUTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZServiceWithoutDis.designer.vb">
+      <DependentUpon>XR_ProformaSEZServiceWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZServiceWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_PurchaseOrderIGSTWithoutDis.designer.vb">
+      <DependentUpon>XR_PurchaseOrderIGSTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_PurchaseOrderIGSTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_PurchaseOrderWithoutDis.designer.vb">
+      <DependentUpon>XR_PurchaseOrderWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_PurchaseOrderWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_QuotationNewWithoutDis.designer.vb">
+      <DependentUpon>XR_QuotationNewWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_QuotationNewWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_QuotationNew.designer.vb">
+      <DependentUpon>XR_QuotationNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_QuotationNew.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_QuotationIGST.designer.vb">
+      <DependentUpon>XR_QuotationIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_QuotationIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_Quotation.designer.vb">
+      <DependentUpon>XR_Quotation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_Quotation.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaServiceInvoiceIGST.designer.vb">
+      <DependentUpon>XR_ProformaServiceInvoiceIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaServiceInvoiceIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaServiceInvoice.designer.vb">
+      <DependentUpon>XR_ProformaServiceInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaServiceInvoice.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaInvoiceIGST.designer.vb">
+      <DependentUpon>XR_ProformaInvoiceIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaInvoiceIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaInvoice.designer.vb">
+      <DependentUpon>XR_ProformaInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaInvoice.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZServiceWithLUT.designer.vb">
+      <DependentUpon>XR_ProformaSEZServiceWithLUT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZServiceWithLUT.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZService.designer.vb">
+      <DependentUpon>XR_ProformaSEZService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZService.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZSales.designer.vb">
+      <DependentUpon>XR_ProformaSEZSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZSales.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZSalesWithLUT.designer.vb">
+      <DependentUpon>XR_ProformaSEZSalesWithLUT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ProformaSEZSalesWithLUT.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ExportSalesIGST.designer.vb">
+      <DependentUpon>XR_ExportSalesIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ExportSalesIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ExportServiceIGST.designer.vb">
+      <DependentUpon>XR_ExportServiceIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ExportServiceIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ServiceInvoiceIGSTWithoutDis.designer.vb">
+      <DependentUpon>XR_ServiceInvoiceIGSTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ServiceInvoiceIGSTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ServiceInvoiceWithoutDis.designer.vb">
+      <DependentUpon>XR_ServiceInvoiceWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ServiceInvoiceWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_SEZSalesIGSTWithoutDis.designer.vb">
+      <DependentUpon>XR_SEZSalesIGSTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_SEZSalesIGSTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_SEZSalesIGST.designer.vb">
+      <DependentUpon>XR_SEZSalesIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_SEZSalesIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_SEZSalesWithLUTWithoutDis.designer.vb">
+      <DependentUpon>XR_SEZSalesWithLUTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_SEZSalesWithLUTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_SEZServiceWithLUTWithoutDis.designer.vb">
+      <DependentUpon>XR_SEZServiceWithLUTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_SEZServiceWithLUTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_SEZServiceWithoutDis.designer.vb">
+      <DependentUpon>XR_SEZServiceWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_SEZServiceWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_SEZService.designer.vb">
+      <DependentUpon>XR_SEZService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_SEZService.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_WorkOrderIGSTWithoutDis.designer.vb">
+      <DependentUpon>XR_WorkOrderIGSTWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_WorkOrderIGSTWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_WorkOrderWithoutDis.designer.vb">
+      <DependentUpon>XR_WorkOrderWithoutDis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_WorkOrderWithoutDis.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_WorkOrderIGST.designer.vb">
+      <DependentUpon>XR_WorkOrderIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_WorkOrderIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_WorkOrder.designer.vb">
+      <DependentUpon>XR_WorkOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_WorkOrder.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_PurchaseOrderIGST.designer.vb">
+      <DependentUpon>XR_PurchaseOrderIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_PurchaseOrderIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_PurchaseOrder.designer.vb">
+      <DependentUpon>XR_PurchaseOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_PurchaseOrder.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_SEZSalesWithLUT.designer.vb">
+      <DependentUpon>XR_SEZSalesWithLUT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_SEZSalesWithLUT.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_SEZServiceWithLUT.designer.vb">
+      <DependentUpon>XR_SEZServiceWithLUT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_SEZServiceWithLUT.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_Invoice.designer.vb">
+      <DependentUpon>XR_Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_Invoice.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_InvoiceIGST.designer.vb">
+      <DependentUpon>XR_InvoiceIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_InvoiceIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ServiceInvoice.designer.vb">
+      <DependentUpon>XR_ServiceInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ServiceInvoice.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XR_ServiceInvoiceIGST.designer.vb">
+      <DependentUpon>XR_ServiceInvoiceIGST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XR_ServiceInvoiceIGST.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Forms\FrmOpenStock.resx">
+      <DependentUpon>FrmOpenStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_ProformaInvoiceNew.resx">
+      <DependentUpon>Frm_ProformaInvoiceNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Message.resx">
+      <DependentUpon>Frm_Message.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddPlungerDia.resx">
+      <DependentUpon>Frm_AddPlungerDia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddModel.resx">
+      <DependentUpon>Frm_AddModel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddFinancialYear.resx">
+      <DependentUpon>Frm_AddFinancialYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddPOProduct.resx">
+      <DependentUpon>Frm_AddPOProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddVendor.resx">
+      <DependentUpon>Frm_AddVendor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddSubCategory.resx">
+      <DependentUpon>Frm_AddSubCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddCategory.resx">
+      <DependentUpon>Frm_AddCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddProduct.resx">
+      <DependentUpon>Frm_AddProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddParty.resx">
+      <DependentUpon>Frm_AddParty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Dashboard.resx">
+      <DependentUpon>Frm_Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_AddGoods.resx">
+      <DependentUpon>Frm_AddGoods.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_PlungerDia.resx">
+      <DependentUpon>Frm_PlungerDia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Model.resx">
+      <DependentUpon>Frm_Model.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Goods.resx">
+      <DependentUpon>Frm_Goods.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_InventoryManagement.resx">
+      <DependentUpon>Frm_InventoryManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Invoice.resx">
+      <DependentUpon>Frm_Invoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_StockReport.resx">
+      <DependentUpon>Frm_StockReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectInventoryType.resx">
+      <DependentUpon>Frm_SelectInventoryType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Type.resx">
+      <DependentUpon>Frm_Type.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Quotation.resx">
+      <DependentUpon>Frm_Quotation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_NewFirstCompany.resx">
+      <DependentUpon>Frm_NewFirstCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectBankForQuotation.resx">
+      <DependentUpon>Frm_SelectBankForQuotation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectQuotationType.resx">
+      <DependentUpon>Frm_SelectQuotationType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_ServiceReportNew.resx">
+      <DependentUpon>Frm_ServiceReportNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SalesReport.resx">
+      <DependentUpon>Frm_SalesReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_POProduct.resx">
+      <DependentUpon>Frm_POProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_ProformaServiceInvoice.resx">
+      <DependentUpon>Frm_ProformaServiceInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectBankForProforma.resx">
+      <DependentUpon>Frm_SelectBankForProforma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectInvoiceTypeForReport.resx">
+      <DependentUpon>Frm_SelectInvoiceTypeForReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectProformaInvoiceType.resx">
+      <DependentUpon>Frm_SelectProformaInvoiceType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectWOType.resx">
+      <DependentUpon>Frm_SelectWOType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_WorkOrder.resx">
+      <DependentUpon>Frm_WorkOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_PurchaseOrder.resx">
+      <DependentUpon>Frm_PurchaseOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectPOType.resx">
+      <DependentUpon>Frm_SelectPOType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Vendor.resx">
+      <DependentUpon>Frm_Vendor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_ProformaInvoice.resx">
+      <DependentUpon>Frm_ProformaInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Party.resx">
+      <DependentUpon>Frm_Party.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectCompany.resx">
+      <DependentUpon>Frm_SelectCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Connection.resx">
+      <DependentUpon>Frm_Connection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Company.resx">
+      <DependentUpon>Frm_Company.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Category.resx">
+      <DependentUpon>Frm_Category.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Bank.resx">
+      <DependentUpon>Frm_Bank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Product.resx">
+      <DependentUpon>Frm_Product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectBank.resx">
+      <DependentUpon>Frm_SelectBank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SelectInvoiceType.resx">
+      <DependentUpon>Frm_SelectInvoiceType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_ServiceInvoice.resx">
+      <DependentUpon>Frm_ServiceInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Test.resx">
+      <DependentUpon>Frm_Test.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_SubCategory.resx">
+      <DependentUpon>Frm_SubCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Login.resx">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_User.resx">
+      <DependentUpon>Frm_User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmWaiting.resx">
+      <DependentUpon>FrmWaiting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Main.resx">
+      <DependentUpon>Frm_Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmOpen.resx">
+      <DependentUpon>FrmOpen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_StartUp.resx">
+      <DependentUpon>Frm_StartUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\XR_ExportSalesIGSTWithoutDis.resx">
+      <DependentUpon>XR_ExportSalesIGSTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ExportServiceIGSTWithoutDis.resx">
+      <DependentUpon>XR_ExportServiceIGSTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_InvoiceIGSTWithoutDis.resx">
+      <DependentUpon>XR_InvoiceIGSTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_InvoiceWithoutDis.resx">
+      <DependentUpon>XR_InvoiceWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaExportSalesWithoutDis.resx">
+      <DependentUpon>XR_ProformaExportSalesWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaExportSales .resx">
+      <DependentUpon>XR_ProformaExportSales .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaExportServiceWithoutDis.resx">
+      <DependentUpon>XR_ProformaExportServiceWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaExportService.resx">
+      <DependentUpon>XR_ProformaExportService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaInvoiceIGSTWithoutDis.resx">
+      <DependentUpon>XR_ProformaInvoiceIGSTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaInvoiceWithoutDis.resx">
+      <DependentUpon>XR_ProformaInvoiceWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaServiceInvoiceIGSTWithoutDis.resx">
+      <DependentUpon>XR_ProformaServiceInvoiceIGSTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaServiceInvoiceWithoutDis.resx">
+      <DependentUpon>XR_ProformaServiceInvoiceWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaSEZSalesWithLUTWithoutDis.resx">
+      <DependentUpon>XR_ProformaSEZSalesWithLUTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaSEZSalesWithoutDis.resx">
+      <DependentUpon>XR_ProformaSEZSalesWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaSEZServiceWithLUTWithoutDis.resx">
+      <DependentUpon>XR_ProformaSEZServiceWithLUTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaSEZServiceWithoutDis.resx">
+      <DependentUpon>XR_ProformaSEZServiceWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_PurchaseOrderIGSTWithoutDis.resx">
+      <DependentUpon>XR_PurchaseOrderIGSTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_PurchaseOrderWithoutDis.resx">
+      <DependentUpon>XR_PurchaseOrderWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_QuotationNewWithoutDis.resx">
+      <DependentUpon>XR_QuotationNewWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_QuotationNew.resx">
+      <DependentUpon>XR_QuotationNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_QuotationIGST.resx">
+      <DependentUpon>XR_QuotationIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_Quotation.resx">
+      <DependentUpon>XR_Quotation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaServiceInvoiceIGST.resx">
+      <DependentUpon>XR_ProformaServiceInvoiceIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaServiceInvoice.resx">
+      <DependentUpon>XR_ProformaServiceInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaInvoiceIGST.resx">
+      <DependentUpon>XR_ProformaInvoiceIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaInvoice.resx">
+      <DependentUpon>XR_ProformaInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaSEZServiceWithLUT.resx">
+      <DependentUpon>XR_ProformaSEZServiceWithLUT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaSEZService.resx">
+      <DependentUpon>XR_ProformaSEZService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaSEZSales.resx">
+      <DependentUpon>XR_ProformaSEZSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ProformaSEZSalesWithLUT.resx">
+      <DependentUpon>XR_ProformaSEZSalesWithLUT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ExportSalesIGST.resx">
+      <DependentUpon>XR_ExportSalesIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ExportServiceIGST.resx">
+      <DependentUpon>XR_ExportServiceIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ServiceInvoiceIGSTWithoutDis.resx">
+      <DependentUpon>XR_ServiceInvoiceIGSTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ServiceInvoiceWithoutDis.resx">
+      <DependentUpon>XR_ServiceInvoiceWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_SEZSalesIGSTWithoutDis.resx">
+      <DependentUpon>XR_SEZSalesIGSTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_SEZSalesIGST.resx">
+      <DependentUpon>XR_SEZSalesIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_SEZSalesWithLUTWithoutDis.resx">
+      <DependentUpon>XR_SEZSalesWithLUTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_SEZServiceWithLUTWithoutDis.resx">
+      <DependentUpon>XR_SEZServiceWithLUTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_SEZServiceWithoutDis.resx">
+      <DependentUpon>XR_SEZServiceWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_SEZService.resx">
+      <DependentUpon>XR_SEZService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_WorkOrderIGSTWithoutDis.resx">
+      <DependentUpon>XR_WorkOrderIGSTWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_WorkOrderWithoutDis.resx">
+      <DependentUpon>XR_WorkOrderWithoutDis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_WorkOrderIGST.resx">
+      <DependentUpon>XR_WorkOrderIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_WorkOrder.resx">
+      <DependentUpon>XR_WorkOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_PurchaseOrderIGST.resx">
+      <DependentUpon>XR_PurchaseOrderIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_PurchaseOrder.resx">
+      <DependentUpon>XR_PurchaseOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_SEZSalesWithLUT.resx">
+      <DependentUpon>XR_SEZSalesWithLUT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_SEZServiceWithLUT.resx">
+      <DependentUpon>XR_SEZServiceWithLUT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_Invoice.resx">
+      <DependentUpon>XR_Invoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_InvoiceIGST.resx">
+      <DependentUpon>XR_InvoiceIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ServiceInvoice.resx">
+      <DependentUpon>XR_ServiceInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XR_ServiceInvoiceIGST.resx">
+      <DependentUpon>XR_ServiceInvoiceIGST.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bin\Debug\IrnSchema.json" />
+    <None Include="Bin\Debug\PreevolTechnics.exe.config" />
+    <None Include="Bin\Debug\PreevolTechnics.vshost.exe.config" />
+    <None Include="Bin\Debug\PreevolTechnics.vshost.exe.manifest" />
+    <None Include="Bin\Release\PreevolTechnics.exe.config" />
+    <None Include="Bin\Release\PreevolTechnics.vshost.exe.config" />
+    <None Include="Bin\Release\PreevolTechnics.vshost.exe.manifest" />
+    <None Include="Bin\x86\Debug\IrnSchema.json" />
+    <None Include="Bin\x86\Debug\PreevolTechnics.exe.config" />
+    <None Include="Bin\x86\Debug\PreevolTechnics.vshost.exe.config" />
+    <None Include="Bin\x86\Debug\result.pdf" />
+    <None Include="Bin\x86\Debug\SalesReport.xlsx" />
+    <None Include="Bin\x86\Debug\test.pdf" />
+    <None Include="Data\DS_Invoice.xsc">
+      <DependentUpon>DS_Invoice.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_Invoice.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_Invoice.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DS_Invoice.xss">
+      <DependentUpon>DS_Invoice.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_ProformaInvoice.xsc">
+      <DependentUpon>DS_ProformaInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_ProformaInvoice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ProformaInvoice.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DS_ProformaInvoice.xss">
+      <DependentUpon>DS_ProformaInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_ProformaServiceInvoice.xsc">
+      <DependentUpon>DS_ProformaServiceInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_ProformaServiceInvoice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ProformaServiceInvoice.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DS_ProformaServiceInvoice.xss">
+      <DependentUpon>DS_ProformaServiceInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_PurchaseOrder.xsc">
+      <DependentUpon>DS_PurchaseOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_PurchaseOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PurchaseOrder.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DS_PurchaseOrder.xss">
+      <DependentUpon>DS_PurchaseOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_Quotation.xsc">
+      <DependentUpon>DS_Quotation.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_Quotation.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Quotation.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DS_Quotation.xss">
+      <DependentUpon>DS_Quotation.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_ServiceInvoice.xsc">
+      <DependentUpon>DS_ServiceInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_ServiceInvoice.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_ServiceInvoice.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DS_ServiceInvoice.xss">
+      <DependentUpon>DS_ServiceInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_WorkOrder.xsc">
+      <DependentUpon>DS_WorkOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DS_WorkOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_WorkOrder.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DS_WorkOrder.xss">
+      <DependentUpon>DS_WorkOrder.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\client_secret_600889909534-jqk9988g7l5ipo0j5u8c92akn64qu1ce.apps.googleusercontent.com.json" />
+    <None Include="Resources\users-icon1.png" />
+    <None Include="Resources\administrator-icon.png" />
+    <None Include="Resources\logo-custom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mctlogo11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bin\Debug\AuthToken.txt" />
+    <Content Include="Bin\Debug\DevExpress.BonusSkins.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="Bin\Debug\DevExpress.CodeParser.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.Data.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.DataAccess.v15.2.UI.dll" />
+    <Content Include="Bin\Debug\DevExpress.DataAccess.v15.2.UI.xml" />
+    <Content Include="Bin\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="Bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="Bin\Debug\DevExpress.Pdf.v15.2.Core.dll" />
+    <Content Include="Bin\Debug\DevExpress.Pdf.v15.2.Core.xml" />
+    <Content Include="Bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll" />
+    <Content Include="Bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml" />
+    <Content Include="Bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="Bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml" />
+    <Content Include="Bin\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="Bin\Debug\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="Bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="Bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="Bin\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="Bin\Debug\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="Bin\Debug\DevExpress.SpellChecker.v15.2.Core.dll" />
+    <Content Include="Bin\Debug\DevExpress.SpellChecker.v15.2.Core.xml" />
+    <Content Include="Bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.Utils.v15.2.UI.dll" />
+    <Content Include="Bin\Debug\DevExpress.Utils.v15.2.UI.xml" />
+    <Content Include="Bin\Debug\DevExpress.Utils.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.Xpo.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraCharts.v15.2.Extensions.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraCharts.v15.2.UI.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraCharts.v15.2.UI.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraCharts.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraGauges.v15.2.Core.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraPivotGrid.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraPivotGrid.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraReports.v15.2.Extensions.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraReports.v15.2.Extensions.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraReports.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraRichEdit.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraRichEdit.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraSpellChecker.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraSpellChecker.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraTreeList.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraTreeList.v15.2.xml" />
+    <Content Include="Bin\Debug\DevExpress.XtraVerticalGrid.v15.2.dll" />
+    <Content Include="Bin\Debug\DevExpress.XtraVerticalGrid.v15.2.xml" />
+    <Content Include="Bin\Debug\de\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.Utils.v15.2.UI.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraCharts.v15.2.Wizard.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraReports.v15.2.Extensions.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraSpellChecker.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\de\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.Utils.v15.2.UI.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraCharts.v15.2.Wizard.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraReports.v15.2.Extensions.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraSpellChecker.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\es\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\GenIRN.txt" />
+    <Content Include="Bin\Debug\IRNData.txt" />
+    <Content Include="Bin\Debug\ja\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.Utils.v15.2.UI.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraCharts.v15.2.Wizard.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraReports.v15.2.Extensions.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraSpellChecker.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ja\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\PreevolTechnics.exe" />
+    <Content Include="Bin\Debug\PreevolTechnics.pdb" />
+    <Content Include="Bin\Debug\PreevolTechnics.vshost.exe" />
+    <Content Include="Bin\Debug\QR.jpg" />
+    <Content Include="Bin\Debug\ru\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.Utils.v15.2.UI.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraCharts.v15.2.Wizard.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraReports.v15.2.Extensions.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraSpellChecker.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="Bin\Debug\ru\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="Bin\Release\PreevolTechnics.vshost.exe" />
+    <Content Include="Bin\x86\Debug\AuthToken.txt" />
+    <Content Include="Bin\x86\Debug\DevExpress.BonusSkins.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.BonusSkins.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Charts.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.CodeParser.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.CodeParser.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Data.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Data.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.DataAccess.v15.2.UI.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.DataAccess.v15.2.UI.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.DataAccess.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.DataAccess.v17.2.UI.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.DataAccess.v17.2.UI.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.DataAccess.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Diagram.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Diagram.v17.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Images.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Office.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Office.v17.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Pdf.v15.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Pdf.v15.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Pdf.v15.2.Drawing.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Pdf.v15.2.Drawing.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Pdf.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Pdf.v17.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.PivotGrid.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.PivotGrid.v17.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Printing.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Printing.v17.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.RichEdit.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.RichEdit.v17.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.RichEdit.v17.2.Export.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Sparkline.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Sparkline.v17.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.SpellChecker.v15.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.SpellChecker.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.SpellChecker.v17.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Utils.v15.2.UI.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Utils.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Utils.v17.2.UI.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Utils.v17.2.UI.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Utils.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Xpo.v15.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.Xpo.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.Xpo.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraBars.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraBars.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v15.2.Extensions.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v15.2.UI.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v15.2.Wizard.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v17.2.Extensions.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v17.2.UI.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v17.2.UI.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v17.2.Wizard.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v17.2.Wizard.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraCharts.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraDiagram.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraDiagram.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraEditors.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraEditors.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraGauges.v17.2.Core.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraGauges.v17.2.Core.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraGrid.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraGrid.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraLayout.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraLayout.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraNavBar.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraNavBar.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraPivotGrid.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraPivotGrid.v15.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraPivotGrid.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraPivotGrid.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraPrinting.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraPrinting.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraReports.v15.2.Extensions.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraReports.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraReports.v17.2.Extensions.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraReports.v17.2.Extensions.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraReports.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraRichEdit.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraRichEdit.v15.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraRichEdit.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraRichEdit.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraSpellChecker.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraSpellChecker.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraSpellChecker.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraTreeList.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraTreeList.v15.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraTreeList.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraTreeList.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraVerticalGrid.v15.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraVerticalGrid.v15.2.xml" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraVerticalGrid.v17.2.dll" />
+    <Content Include="Bin\x86\Debug\DevExpress.XtraVerticalGrid.v17.2.xml" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Data.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.DataAccess.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.DataAccess.v17.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Diagram.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Office.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Pdf.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.PivotGrid.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Printing.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.RichEdit.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Sparkline.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Utils.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Utils.v17.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.Xpo.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraBars.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraCharts.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraCharts.v17.2.Wizard.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraEditors.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraGauges.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraLayout.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraNavBar.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraPivotGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraPrinting.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraReports.v17.2.Extensions.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraReports.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraRichEdit.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraSpellChecker.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraTreeList.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\de\DevExpress.XtraVerticalGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\EASendMail.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Data.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.DataAccess.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.DataAccess.v17.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Diagram.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Office.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Pdf.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.PivotGrid.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Printing.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.RichEdit.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Sparkline.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Utils.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Utils.v17.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.Xpo.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraBars.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraCharts.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraCharts.v17.2.Wizard.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraEditors.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraGauges.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraLayout.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraNavBar.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraPivotGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraPrinting.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraReports.v17.2.Extensions.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraReports.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraRichEdit.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraSpellChecker.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraTreeList.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\es\DevExpress.XtraVerticalGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\GenIRN.txt" />
+    <Content Include="Bin\x86\Debug\IRNData.txt" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Data.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.DataAccess.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.DataAccess.v17.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Diagram.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Office.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Pdf.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.PivotGrid.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Printing.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.RichEdit.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Sparkline.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Utils.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Utils.v17.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.Xpo.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraBars.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraCharts.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraCharts.v17.2.Wizard.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraEditors.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraGauges.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraLayout.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraNavBar.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraPivotGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraPrinting.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraReports.v17.2.Extensions.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraReports.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraRichEdit.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraSpellChecker.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraTreeList.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ja\DevExpress.XtraVerticalGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\Newtonsoft.Json.dll" />
+    <Content Include="Bin\x86\Debug\Newtonsoft.Json.Schema.dll" />
+    <Content Include="Bin\x86\Debug\Newtonsoft.Json.Schema.xml" />
+    <Content Include="Bin\x86\Debug\Newtonsoft.Json.xml" />
+    <Content Include="Bin\x86\Debug\PreevolTechnics.exe" />
+    <Content Include="Bin\x86\Debug\PreevolTechnics.pdb" />
+    <Content Include="Bin\x86\Debug\PreevolTechnics.vshost.exe" />
+    <Content Include="Bin\x86\Debug\QR.jpg" />
+    <Content Include="Bin\x86\Debug\QRCode.txt" />
+    <Content Include="Bin\x86\Debug\RestSharp.dll" />
+    <Content Include="Bin\x86\Debug\RestSharp.xml" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Data.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.DataAccess.v15.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.DataAccess.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.DataAccess.v17.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Diagram.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Office.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Pdf.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.PivotGrid.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Printing.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.RichEdit.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Sparkline.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Utils.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Utils.v17.2.UI.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.Xpo.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraBars.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraCharts.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraCharts.v17.2.Wizard.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraEditors.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraGauges.v17.2.Core.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraLayout.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraNavBar.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraPivotGrid.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraPivotGrid.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraPrinting.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraReports.v17.2.Extensions.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraReports.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraRichEdit.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraRichEdit.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraSpellChecker.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraTreeList.v17.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraVerticalGrid.v15.2.resources.dll" />
+    <Content Include="Bin\x86\Debug\ru\DevExpress.XtraVerticalGrid.v17.2.resources.dll" />
+    <Content Include="Resources\image.png" />
+    <Content Include="Resources\Preevol stamp.jpg" />
+    <None Include="Resources\mct_intex_logo_1_gSz_icon.ico" />
+    <None Include="Resources\storage.png" />
+    <None Include="Resources\client_list_text-512.png" />
+    <None Include="Resources\Image1.bmp" />
+    <Content Include="Resources\dashboard-cropped.png" />
+    <Content Include="Resources\Icon-Dashboard.png" />
+    <Content Include="Resources\intx.jpg" />
+    <None Include="Resources\intx1.jpg" />
+    <Content Include="Resources\mctlogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\AkshEngineeringSystem\v14\" />
+    <Folder Include=".vs\Preevol Technics\v14\" />
+    <Folder Include="Bin\x86\Release\" />
+    <Folder Include="Obj\Debug\" />
+    <Folder Include="Obj\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Nuke.Common.7.0.2\build\Nuke.Common.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Nuke.Common.7.0.2\build\Nuke.Common.props'))" />
+    <Error Condition="!Exists('packages\Nuke.Common.7.0.2\build\Nuke.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Nuke.Common.7.0.2\build\Nuke.Common.targets'))" />
+  </Target>
+  <Import Project="packages\Nuke.Common.7.0.2\build\Nuke.Common.targets" Condition="Exists('packages\Nuke.Common.7.0.2\build\Nuke.Common.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
